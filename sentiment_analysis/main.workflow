@@ -4,7 +4,7 @@ workflow "benchmark on sentiment analysis" {
 
 action "pre process data" {
   uses = "docker://paddlepaddle/paddle:1.6.2"
-  args = "bash pre_process_data.sh"
+  args = "bash ./sentiment_analysis/pre_process_data.sh"
 }
 
 action "run benchmark" {
