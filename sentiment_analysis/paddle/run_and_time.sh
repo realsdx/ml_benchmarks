@@ -6,11 +6,12 @@ start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
 seed=$1
+gpu=$2
 echo "Running sentiment benchmark with seed $seed"
 
 # Train a sentiment_analysis model (default: conv model), with a user
 # specified seed
-python ./sentiment_analysis/paddle/train.py -s ${seed}
+python ./sentiment_analysis/paddle/train.py -s ${seed} ${gpu}
 
 # End timing
 end_time=$(date +%s)
