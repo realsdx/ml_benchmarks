@@ -10,5 +10,5 @@ action "pre process data" {
 action "run benchmark" {
   needs="pre process data"
   uses = "docker://paddlepaddle/paddle:1.6.2"
-  runs = ["bash ./sentiment_analysis/paddle/run-and_time.sh 2"]
+  runs = ["/bin/bash ./sentiment_analysis/paddle/run-and_time.sh 2"]
 }
