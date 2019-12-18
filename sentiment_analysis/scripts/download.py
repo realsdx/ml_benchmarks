@@ -5,7 +5,7 @@ import requests
 import shutil
 import sys
 
-URL = 'http://ai.stanford.edu/%7Eamaas/data/sentiment/aclImdb_v1.tar.gz'
+URL = 'https://dataset.bj.bcebos.com/imdb%2FaclImdb_v1.tar.gz'
 DIR = os.path.expanduser('~/.cache/paddle/dataset/imdb')
 PATH = os.path.join(DIR, URL.split('/')[-1])
 CHUNK_SIZE = 4096
