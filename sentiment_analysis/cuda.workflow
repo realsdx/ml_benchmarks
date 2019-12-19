@@ -10,5 +10,5 @@ action "download_and_verify" {
 action "run benchmark" {
   needs="download_and_verify"
   uses = "docker://paddlepaddle/paddle:1.6.2-gpu-cuda9.0-cudnn7"
-  runs = "/bin/bash ./sentiment_analysis/paddle/run_and_time.sh 2 gpu"
+  runs = "/bin/bash ./sentiment_analysis/paddle/run_and_time.sh 2 -g"
 }
