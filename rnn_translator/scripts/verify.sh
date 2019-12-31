@@ -2,6 +2,13 @@
 
 set -e
 
+echo "--- DEBUG ---"
+printf "PWD: "; pwd
+printf "LS: /data :\n"; ls /data -lah
+printf "LS: /data/rnn/data/ :\n"; ls /data/rnn/data -lah
+echo "--- DEBUG ----"
+
+
 ACTUAL_SRC_TRAIN=`cat data/train.tok.clean.bpe.32000.en |md5sum`
 EXPECTED_SRC_TRAIN='b7482095b787264a310d4933d197a134  -'
 if [[ $ACTUAL_SRC_TRAIN = $EXPECTED_SRC_TRAIN ]]; then
